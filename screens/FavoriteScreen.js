@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const CategoriesScreen = () => {
-    return <View style={styles.screen}><Text>Category</Text></View>
+const FavoriteScreen = () => {
+    return <View style={styles.screen}><Text>FavoriteScreen</Text></View>
 }
 
 const styles = StyleSheet.create({
@@ -12,3 +12,5 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     }
 })
+
+export default FavoriteScreen;
