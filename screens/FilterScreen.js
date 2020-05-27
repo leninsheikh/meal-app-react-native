@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import ToggleDrawer from '../components/ToggleDrawer';
 
-const CategoriesScreen = () => {
+const FilterScreen = () => {
     return <View style={styles.screen}><Text>Category</Text></View>
 }
 
@@ -12,3 +13,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     }
 })
+
+FilterScreen.navigationOptions = navigationData => {
+    return {
+        headerTitle: 'Filter Meals',
+        headerLeft: () => <ToggleDrawer navigation={navigationData.navigation} />
+    }
+}
+
+export default FilterScreen;

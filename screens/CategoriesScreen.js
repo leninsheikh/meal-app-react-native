@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Platform } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
+
 import { CATEGORIES } from '../data/dummy';
-import Colors from '../data/constants/Colors';
 import CategoryGridTile from '../components/CategoryGridTIle';
+import ToggleDrawer from '../components/ToggleDrawer';
+
 
 const CategoriesScreen = props => {
     const renderGridItem = itemData => {
@@ -25,8 +27,11 @@ const CategoriesScreen = props => {
     )
 }
 
-CategoriesScreen.navigationOptions = {
-    headerTitle: 'Meal Categories'
+CategoriesScreen.navigationOptions = navData => {
+    return {
+        headerTitle: 'Meal Categories',
+        headerLeft: () => <ToggleDrawer navigation={navData.navigation}/>
+    }
 }
 
 const styles = StyleSheet.create({
